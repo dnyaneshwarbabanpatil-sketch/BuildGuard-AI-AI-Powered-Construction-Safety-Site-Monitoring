@@ -1,0 +1,34 @@
+import React, { useEffect, useState } from 'react';
+
+const Dashboard = () => {
+  return (
+    <div className="min-h-screen bg-slate-900 text-white p-8">
+      <header className="flex justify-between items-center mb-10">
+        <h1 className="text-3xl font-bold text-amber-500">BuildGuard AI</h1>
+        <div className="bg-emerald-500/20 text-emerald-500 px-4 py-2 rounded-full border border-emerald-500">
+          Site Status: Secure
+        </div>
+      </header>
+      
+      <div className="grid grid-cols-3 gap-6">
+        <div className="col-span-2 bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+          <div className="p-4 bg-slate-700 font-mono text-sm">LIVE_FEED_01</div>
+          <img src="http://localhost:8000/video_feed" className="w-full h-[500px] object-cover" />
+        </div>
+        
+        <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
+          <h2 className="text-xl font-semibold mb-4 text-amber-400">Incident Logs</h2>
+          <div className="space-y-4">
+            <div className="p-3 bg-red-500/10 border border-red-500/50 rounded-lg">
+              <p className="text-xs text-red-400 font-bold">HIGH SEVERITY</p>
+              <p className="text-sm">No Helmet - Area A</p>
+              <p className="text-xs text-slate-400">Gemini: Worker at risk of head injury from overhead crane.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
